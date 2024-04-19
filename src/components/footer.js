@@ -1,0 +1,67 @@
+import React from "react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  faGithub,
+  faFacebook,
+  faInstagram,
+  faLinkedin,
+} from "@fortawesome/free-brands-svg-icons";
+
+function footer() {
+  return (
+    <div>
+      <div className="container-fluid bg-body-tertiary bg-primary-subtle">
+        <div className="row">
+          <div className="col-3 text-center"></div>
+          <div className="col-6 text-center">
+            <div style={{ fontSize: "2rem", fontWeight: "bold" }}>
+              Contact Me
+            </div>
+            <div>
+              <a
+                href="https://github.com/ChuckyJI"
+                target="_blank"
+                rel="noopener noreferrer"
+                style={{ margin: "0 10px 0 10px" }}
+              >
+                <FontAwesomeIcon icon={faGithub} size="2x" />
+              </a>
+              <a
+                href="https://github.com/ChuckyJI"
+                target="_blank"
+                rel="noopener noreferrer"
+                style={{ margin: "0 10px 0 10px" }}
+              >
+                <FontAwesomeIcon icon={faFacebook} size="2x" />
+              </a>
+              <a
+                href="https://github.com/ChuckyJI"
+                target="_blank"
+                rel="noopener noreferrer"
+                style={{ margin: "0 10px 0 10px" }}
+              >
+                <FontAwesomeIcon icon={faLinkedin} size="2x" />
+              </a>
+              <a
+                href="https://github.com/ChuckyJI"
+                target="_blank"
+                rel="noopener noreferrer"
+                style={{ margin: "0 10px 0 10px" }}
+              >
+                <FontAwesomeIcon icon={faInstagram} size="2x" />
+              </a>
+            </div>
+            <div style={{ lineHeight: 2 }}>Email: satotroy.ji@gmail.com</div>
+            <hr />
+            <div style={{ fontWeight: "bold", margin: "10px 0 10px 0" }}>
+              © 2024 Chucky Kazamatsuri. All Rights Reserved{" "}
+            </div>
+          </div>
+          <div className="col-3 text-center"></div>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+export default footer;
