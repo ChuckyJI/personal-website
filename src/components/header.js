@@ -21,7 +21,7 @@ function Header() {
             <span className="navbar-toggler-icon"></span>
           </button>
           <div
-            className="collapse navbar-collapse d-flex justify-content-center"
+            className="collapse navbar-collapse justify-content-center"
             id="navbarNavDropdown"
           >
             <ul className="navbar-nav">

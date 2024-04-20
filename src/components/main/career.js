@@ -42,7 +42,7 @@ function career() {
       <div className="container">
         <div className="row">
           <div className="col"></div>
-          <div className="col-10">
+          <div className="col-lg-10">
             <div className="display-4">Career</div>
             <p
               style={{
@@ -68,7 +68,7 @@ function career() {
           <hr />
         </div>
         <div className="row">
-          <div className="col-1">
+          <div className="col-lg-1 d-none d-lg-block">
             <div
               className="list-group"
               style={{ position: "sticky", top: "20%" }}
@@ -105,7 +105,7 @@ function career() {
               </a>
             </div>
           </div>
-          <div className="col-11">
+          <div className="col-lg-11 col-sm-12">
             <div
               data-bs-smooth-scroll="true"
               className="scrollspy-example"
@@ -121,7 +121,7 @@ function career() {
                 2024
               </h4>
               <div className="row">
-                <div className="col d-flex flex-column align-items-center">
+                <div className="col-md-6 col-sm-12 d-flex flex-column align-items-center">
                   <img src={Mediacorp} alt="" />
                   <div className="lead text-center">
                     Mediacorp PTE Ltds. <br />
@@ -138,7 +138,7 @@ function career() {
                   </div>
                 </div>
                 <div
-                  className="col d-flex flex-column align-items-center  bg-dark-subtle"
+                  className="col-md-6 d-none d-lg-block d-md-flex flex-column align-items-center  bg-dark-subtle"
                   style={{
                     textAlign: "left",
                     lineHeight: 2,
@@ -170,7 +170,7 @@ function career() {
 
               <div className="row">
                 <div
-                  className="col d-flex flex-column align-items-center  bg-dark-subtle"
+                  className="col-md-6 d-none d-lg-block d-md-flex flex-column align-items-center  bg-dark-subtle"
                   style={{
                     textAlign: "left",
                     lineHeight: 2,
@@ -190,7 +190,7 @@ function career() {
                   [BRONZE] LLM Science Exam: Use LLMs to answer difficult
                   science questions
                 </div>
-                <div className="col d-flex flex-column align-items-center">
+                <div className="col-md-6 col-sm-12 d-flex flex-column align-items-center">
                   <img src={Mediacorp} alt="" />
                   <div className="lead">
                     Mediacorp PTE Ltds. <br />
@@ -228,7 +228,7 @@ function career() {
                 2022
               </h4>
               <div className="row">
-                <div className="col d-flex flex-column align-items-center">
+                <div className="col-md-6 col-sm-12 d-lg-flex flex-column align-items-center">
                   <img src={allpku} alt="" style={{ width: "20%" }} />
                   <div className="lead text-center">
                     Alliance PKU Management Consultants LTD. <br />
@@ -255,7 +255,7 @@ function career() {
                   </div>
                 </div>
                 <div
-                  className="col d-flex flex-column align-items-center  bg-dark-subtle"
+                  className="col-md-6 d-none d-lg-block d-md-flex flex-column align-items-center  bg-dark-subtle"
                   style={{
                     textAlign: "left",
                     lineHeight: 2,
@@ -282,7 +282,7 @@ function career() {
               </h4>
               <div className="row">
                 <div
-                  className="col d-flex flex-column align-items-center  bg-dark-subtle"
+                  className="col-md-6 d-none d-lg-block d-md-flex flex-column align-items-center  bg-dark-subtle"
                   style={{
                     textAlign: "left",
                     lineHeight: 2,
@@ -296,7 +296,7 @@ function career() {
                   2021: 49 ppl) <br />- National SME management consulting
                   expert (Ministry of Industry and Information Technology)
                 </div>
-                <div className="col d-flex flex-column align-items-center">
+                <div className="col-md-6 col-sm-12 d-flex flex-column align-items-center">
                   <img src={allpku} alt="" style={{ width: "20%" }} />
                   <div className="lead text-center">
                     Alliance PKU Management Consultants LTD. <br />

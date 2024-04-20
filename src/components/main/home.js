@@ -1,5 +1,5 @@
 import React from "react";
-import universe from "../../static/videos/universe.mov";
+import universe from "../../static/videos/universe.mp4";
 import backchucky from "../../static/images/without_BG.png";
 
 function home() {
@@ -9,6 +9,7 @@ function home() {
       <div className="position-relative">
         <video
           autoPlay
+          playsInline
           muted
           loop
           id="myVideo"
@@ -29,8 +30,8 @@ function home() {
         />
         <div className="container-fluid position-absolute top-50 start-50 translate-middle">
           <div className="row">
-            <div className="col-1"></div>
-            <div className="col-6 text-center">
+            <div className="col-xl-1"></div>
+            <div className="col-xl-6 text-center">
               <div
                 style={{ fontSize: "4rem", fontWeight: "bold", color: "white" }}
               >
@@ -46,7 +47,7 @@ function home() {
                 AI Full-stack Engineer & Consultant (Senior Partner)
               </div>
             </div>
-            <div className="col-5"></div>
+            <div className="col-xl-5"></div>
           </div>
         </div>
       </div>
