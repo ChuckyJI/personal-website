@@ -10,6 +10,7 @@ import {
 function footer() {
   return (
     <div>
+      <div id="contact"></div>
       <div className="container-fluid bg-body-tertiary bg-primary-subtle">
         <div className="row">
           <div className="col-3 text-center"></div>
@@ -54,7 +55,7 @@ function footer() {
             <div style={{ lineHeight: 2 }}>Email: satotroy.ji@gmail.com</div>
             <hr />
             <div style={{ fontWeight: "bold", margin: "10px 0 10px 0" }}>
-              © 2024 Chucky Kazamatsuri. All Rights Reserved{" "}
+              © COPYRIGHT 2024 BY CHUCKY KAZAMATSURI.
             </div>
           </div>
           <div className="col-3 text-center"></div>

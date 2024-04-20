@@ -1,12 +1,13 @@
 import React from "react";
+import "../App.css";
 
 function Header() {
   return (
     <div>
-      <nav className="navbar navbar-expand-lg bg-body-tertiary bg-primary-subtle">
+      <nav className="navbar navbar-expand-lg bg-body-tertiary bg-light-subtle fixed-top">
         <div className="container-fluid">
           <a className="navbar-brand" href="/">
-            This is the image
+            CHUCKY
           </a>
           <button
             className="navbar-toggler"
@@ -30,14 +31,15 @@ function Header() {
                 </a>
               </li>
               <li className="nav-item">
-                <a className="nav-link" href="/">
+                <a className="nav-link" href="#career">
                   Career
                 </a>
               </li>
+
               <li className="nav-item dropdown">
                 <a
                   className="nav-link dropdown-toggle"
-                  href="/"
+                  href="#lab"
                   id="navbarDropdown"
                   role="button"
                   data-bs-toggle="dropdown"
@@ -47,24 +49,29 @@ function Header() {
                 </a>
                 <ul className="dropdown-menu">
                   <li>
-                    <a className="dropdown-item" href="/">
+                    <a className="dropdown-item" href="#lab">
                       Machine Learning Lab
                     </a>
                   </li>
                   <li>
-                    <a className="dropdown-item" href="/">
-                      Working Lab
+                    <a className="dropdown-item" href="#lab">
+                      Work Lab
                     </a>
                   </li>
                   <li>
-                    <a className="dropdown-item" href="/">
-                      New Lab
+                    <a className="dropdown-item" href="#lab">
+                      Discovery Lab
                     </a>
                   </li>
                 </ul>
               </li>
               <li className="nav-item">
-                <a className="nav-link" href="/">
+                <a className="nav-link" href="#habit">
+                  Make Friends
+                </a>
+              </li>
+              <li className="nav-item">
+                <a className="nav-link" href="#contact">
                   Contact Me
                 </a>
               </li>
@@ -72,6 +79,12 @@ function Header() {
           </div>
         </div>
       </nav>
+      <button
+        className="to-top bg-info-subtle btn-sm"
+        onClick={() => window.scrollTo(0, 0)}
+      >
+        To Top
+      </button>
     </div>
   );
 }
