@@ -206,7 +206,7 @@ function career() {
                   </div>
                   <br />
                   <img src={nus} alt="" />
-                  <div className="lead">System Analysis (Graduate Diploma)</div>
+                  <div className="lead">System Analysis</div>
                   <div>
                     {iconDisplay(faPython)}
                     {iconDisplay(faJava)}
