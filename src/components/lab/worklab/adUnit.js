@@ -62,19 +62,22 @@ function adUnit() {
                     className="head mt-3 mb-3"
                     style={{ fontWeight: "bold" }}
                   >
-                    Welcome to the Lab:
+                    Welcome to the Lab (Sorry, Online Testing Function Not
+                    Available Now):
                   </div>
                   <form>
                     <input
                       type="text"
                       class="form-control"
                       placeholder="Path"
+                      disabled
                     />
                     <input
                       type="button"
                       class="btn btn-primary mt-2"
                       value="Generate"
                       omClick={() => alert("Generating...")}
+                      disabled
                     />
                   </form>
                 </div>
