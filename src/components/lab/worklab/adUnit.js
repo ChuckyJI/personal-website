@@ -88,22 +88,16 @@ function adUnit() {
                 Example Input:
               </div>
               <div style={{ padding: "0 20px" }}>
-                cna_dweb/imu2/singapore/landingpage/na <br />
-                cna_dweb/imu3/singapore/landingpage/na
+                CNNi/world/europe/leaf/vls <br />
+                CNNi/world/american/leaf/bst
                 <br />
-                cna_mweb/imu1/asia/articlepage/na
+                CNNi/world/china/leaf/bst
                 <br />
-                cna_mweb/side2/asia/articlepage/na
+                bbccom/news/asia-india/article/top
                 <br />
-                cna_mweb/imu1/singapore/landingpage/na
+                bccom/news/asia-india/article/interstitial
                 <br />
                 cna_mweb/imu2/singapore/landingpage/na
-                <br />
-                mothership_desktop/article/na/na/lb1
-                <br />
-                mothership_mobileweb/article/na/na/lb1
-                <br />
-                espn_desktop/frontPage/oop
                 <br />
               </div>
               <div className="head mt-3 mb-3" style={{ fontWeight: "bold" }}>
