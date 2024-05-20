@@ -1,70 +1,6 @@
 import React from "react";
 import { Tab, Tabs } from "react-bootstrap";
-
-const label = (
-  collapseExample,
-  Name,
-  Language,
-  Difficulty,
-  Background,
-  href
-) => {
-  return (
-    <div className="container mt-2 mb-2">
-      <div className="row">
-        <div className="col-12">
-          <div
-            class="btn btn-block"
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target={"#" + collapseExample}
-            aria-expanded="false"
-            aria-controls={collapseExample}
-            style={{
-              width: "100%",
-              backgroundColor: "rgba(222,222,222,0.7)",
-            }}
-          >
-            <div className="row">
-              <div className="col-3" style={{ textAlign: "left" }}>
-                Project: {Name}
-              </div>
-              <div className="col-3" style={{ textAlign: "left" }}>
-                {Language}
-              </div>
-              <div className="col-3">Difficulty: {Difficulty}/10</div>
-              <div className="col-3" style={{ textAlign: "right" }}>
-                More Details ↓
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div className="row">
-        <div className="col-12">
-          <div class="collapse" id={collapseExample}>
-            <div
-              class="card card-body d-flex justify-content-between align-items-end"
-              style={{ textAlign: "left", lineHeight: 2 }}
-            >
-              <div>Background: {Background}</div>
-              <div style={{ width: "100px" }}>
-                <a
-                  className="btn btn-primary w-100"
-                  href={href}
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  More ...
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  );
-};
+import { label } from "../../utils/constants";
 
 function lab() {
   return (
@@ -73,7 +9,10 @@ function lab() {
       <div className="display-4" style={{ margin: "20px" }}>
         Laboratory
       </div>
-      <div style={{ height: "780px" }}>
+      <div style={{ margin: "5px 0px" }}>
+        (Project details are only available on desktop.)
+      </div>
+      <div style={{ minHeight: "400px", height: "auto" }}>
         <Tabs
           defaultActiveKey="home"
           id="uncontrolled-tab-example"
@@ -81,12 +20,19 @@ function lab() {
         >
           <Tab eventKey="home" title="Machine Learning Lab">
             <div style={{ margin: "10px" }}></div>
-            TBA
+            {label(
+              "adProject",
+              "Heart Disease Prediction",
+              "Python, React, Flask, TensorFlow",
+              6,
+              "This project is part of my final project at NUS. I am responsible for the machine learning component. When a doctor sends me patient data (the amount of which is unknown).I will use it to calculate the probability of those patients developing heart disease. My training data consists of five public heart disease datasets. I have set up seven different models for the user to choose from, each with customizable parameters. Once the user has selected a model, they can input patient data and receive a prediction of the probability of heart disease.",
+              "/lab/mllab/adProject"
+            )}
           </Tab>
-          <Tab eventKey="profile" title="Work Lab">
+          <Tab eventKey="profile" title="Work / Study Lab">
             <div style={{ margin: "10px" }}></div>
             {label(
-              "collapseExample",
+              "adunit",
               "Ad Units Generation",
               "Python, AWS, JavaScript",
               2,
@@ -94,25 +40,40 @@ function lab() {
               "/lab/worklab/adunit"
             )}
             {label(
-              "collapseExample1",
-              "Ad Units Generation",
-              "Python, AWS, JavaScript",
-              2,
-              "In Google Ad Manager, whenever a new website is added, we need to include all ad units for each website according to Google Ads rules. This makes it easier for us to manage and track ad impressions.",
-              "/lab/worklab/adunit"
+              "autoscrollAdTech",
+              "Auto-Scroll Ad Testing",
+              "JavaScript (Puppeteer) ",
+              6,
+              "This project use Puppeteer to generate testing report in Advertisement within the public website which use the Google Ads System. It supports the desktop testing and mobile views, based on the output of the testing report, we can improve the advertisement quality and the user experience, at the same time we will know either which ad is displayed in the website and which is not or which format of one ad is displayed normally in the website.",
+              "/lab/worklab/autoscrollAdTech"
             )}
-            <a
-              className="btn btn-primary"
-              style={{ margin: "10px" }}
-              href="/lab/worklab/adunit"
-            >
-              aa
-            </a>
-            TBA
+            {label(
+              "autoPreviewUrlTesting",
+              "Auto-Preview URL Testing",
+              "JavaScript (Puppeteer)",
+              3,
+              "This project inherits from the Ad Units Generation with the help of Puppeteer. It sets up a connection with Google Ad Manager using Puppeteer, generates a preview URL for the campaign, and takes a screenshot of the target website simultaneously. This makes it much easier for the staff to check the advertisement on the website and share the information with the campaign team.",
+              "/lab/worklab/autoPreviewUrlTesting"
+            )}
+            {label(
+              "AndroidMatchGame",
+              "Android Match Game",
+              "Java, Android Studio",
+              5,
+              "This is my Android Match Game project from NUS. In this game, you find a website and fetch 20 images from it, then choose 6 of them to start the game. The game can be played by 1 player for fun or 2 players to compete. During the game, a player selects 2 images to match. If the images match, the player earns a point. If they don’t match, the images are hidden and the next player takes their turn. The player with the most points at the end wins.",
+              "/lab/worklab/AndroidMatchGame"
+            )}
           </Tab>
           <Tab eventKey="contact" title="Discovery Lab">
             <div style={{ margin: "10px" }}></div>
-            TBA
+            {label(
+              "presignUrl",
+              "AWS S3 PresignedURL",
+              "Python, AWS, JavaScript",
+              4,
+              "This project is to generate a presigned URL from the frontend to access a private S3 bucket. The presigned URL is a temporary URL that grants access to a private S3 bucket for a limited time, which will be used to upload files. It is a practice project before put it into production.",
+              "/lab/discoverylab/s3Presignurl"
+            )}
           </Tab>
         </Tabs>
       </div>

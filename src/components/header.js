@@ -55,7 +55,7 @@ function Header() {
                   </li>
                   <li>
                     <a className="dropdown-item" href="#lab">
-                      Work Lab
+                      Work / Study Lab
                     </a>
                   </li>
                   <li>
