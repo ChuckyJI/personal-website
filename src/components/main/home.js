@@ -1,8 +1,10 @@
 import React from "react";
 import universe from "../../static/videos/universe.mp4";
 import backchucky from "../../static/images/without_BG.png";
+import { useTranslation } from "react-i18next";
 
-function home() {
+function Home() {
+  const { t } = useTranslation();
   return (
     <div>
       {" "}
@@ -35,7 +37,7 @@ function home() {
               <div
                 style={{ fontSize: "4rem", fontWeight: "bold", color: "white" }}
               >
-                Chucky Kazamatsuri
+                {t("Chucky Kazamatsuri")}
               </div>
               <div
                 style={{
@@ -44,7 +46,7 @@ function home() {
                   color: "white",
                 }}
               >
-                AI Full-stack Engineer & Consultant (Senior Partner)
+                {t("title")}
               </div>
             </div>
             <div className="col-xl-5"></div>
@@ -55,4 +57,4 @@ function home() {
   );
 }
 
-export default home;
+export default Home;

@@ -7,9 +7,12 @@ import travel from "../../static/images/friend/travel.jpg";
 import travel_small from "../../static/images/friend/traval_small.png";
 import hiking from "../../static/images/friend/hiking.jpg";
 import hiking_small from "../../static/images/friend/hiking_small.png";
+import { useTranslation } from "react-i18next";
+
 import "../../App.css";
 
-function friend() {
+function Friend() {
+  const { t } = useTranslation();
   return (
     <div style={{ backgroundColor: "rgba(0,222,0,0.2)" }}>
       <div id="habit" style={{ padding: "20px" }}></div>
@@ -27,14 +30,21 @@ function friend() {
             />
             <div className="hover-content">
               <div>
-                [Music] <br />
-                Classic Music <br />
-                🎹 Piano: 12 years <br />
-                🥁 Drums: 3 years <br />
+                {t("friend-1-jd-detail-1")}
                 <br />
-                🔥 VPO, BPO, LPO, BRSO <br />
-                🔥 Beethoven & Tchikovsky Best <br />
-                💣 Hate Bruckner <br />
+                {t("friend-1-jd-detail-2")}
+                <br />
+                {t("friend-1-jd-detail-3")}
+                <br />
+                {t("friend-1-jd-detail-4")}
+                <br />
+                <br />
+                {t("friend-1-jd-detail-5")}
+                <br />
+                {t("friend-1-jd-detail-6")}
+                <br />
+                {t("friend-1-jd-detail-7")}
+                <br />
               </div>
             </div>
           </div>
@@ -47,14 +57,21 @@ function friend() {
             />
             <div className="hover-content">
               <div>
-                [Cooking] <br />
-                🍳 Chinese food <br />
-                🍽️ West food <br />
-                🌭 Dessert <br />
+                {t("friend-2-jd-detail-1")}
                 <br />
-                🔥 Shanghainese Cuisine <br />
-                🔥 North China Cuisine <br />
-                💣 Wash dishes <br />
+                {t("friend-2-jd-detail-2")}
+                <br />
+                {t("friend-2-jd-detail-3")}
+                <br />
+                {t("friend-2-jd-detail-4")}
+                <br />
+                <br />
+                {t("friend-2-jd-detail-5")}
+                <br />
+                {t("friend-2-jd-detail-6")}
+                <br />
+                {t("friend-2-jd-detail-7")}
+                <br />
               </div>
             </div>
           </div>
@@ -67,12 +84,16 @@ function friend() {
             />
             <div className="hover-content">
               <div>
-                [Travel] <br />
-                🌍 50+ Countries <br />
-                🗺️ Only for Cultural Heritage <br />
+                {t("friend-3-jd-detail-1")}
                 <br />
-                🔥 2024: South American <br />
-                🔥 2024: Australia <br />
+                {t("friend-3-jd-detail-2")}
+                <br />
+                {t("friend-3-jd-detail-3")}
+                <br />
+                <br />
+                {t("friend-3-jd-detail-4")}
+                <br />
+                {t("friend-3-jd-detail-5")}
               </div>
             </div>
           </div>{" "}
@@ -85,12 +106,16 @@ function friend() {
             />
             <div className="hover-content">
               <div>
-                [Hiking] <br />
-                ⛰️ Like best <br />
-                🤿 Scuba Diving OK <br />
+                {t("friend-4-jd-detail-1")}
                 <br />
-                🔥 Goal: Mount Kilimanjaro <br />
-                🔥 Backgound Pic: Everest Base Camp <br />
+                {t("friend-4-jd-detail-2")}
+                <br />
+                {t("friend-4-jd-detail-3")}
+                <br />
+                <br />
+                {t("friend-4-jd-detail-4")}
+                <br />
+                {t("friend-4-jd-detail-5")}
               </div>
             </div>
           </div>
@@ -110,16 +135,22 @@ function friend() {
             </div>
             <div class="col-md-8">
               <div class="card-body">
-                <h5 class="card-title">Music</h5>
+                <h5 class="card-title">{t("Music")}</h5>
                 <p class="card-text">
                   <div>
-                    Classic Music <br />
-                    🎹 Piano: 12 years <br />
-                    🥁 Drums: 3 years <br />
+                    {t("friend-1-jd-detail-2")}
                     <br />
-                    🔥 VPO, BPO, LPO, BRSO <br />
-                    🔥 Beethoven & Tchikovsky Best <br />
-                    💣 Hate Bruckner <br />
+                    {t("friend-1-jd-detail-3")}
+                    <br />
+                    {t("friend-1-jd-detail-4")}
+                    <br />
+                    <br />
+                    {t("friend-1-jd-detail-5")}
+                    <br />
+                    {t("friend-1-jd-detail-6")}
+                    <br />
+                    {t("friend-1-jd-detail-7")}
+                    <br />
                   </div>
                 </p>
               </div>
@@ -139,16 +170,22 @@ function friend() {
             </div>
             <div class="col-md-8">
               <div class="card-body">
-                <h5 class="card-title">Cooking</h5>
+                <h5 class="card-title">{t("Cooking")}</h5>
                 <p class="card-text">
                   <div>
-                    🍳 Chinese food <br />
-                    🍽️ West food <br />
-                    🌭 Dessert <br />
+                    {t("friend-2-jd-detail-2")}
                     <br />
-                    🔥 Shanghainese Cuisine <br />
-                    🔥 North China Cuisine <br />
-                    💣 Wash dishes <br />
+                    {t("friend-2-jd-detail-3")}
+                    <br />
+                    {t("friend-2-jd-detail-4")}
+                    <br />
+                    <br />
+                    {t("friend-2-jd-detail-5")}
+                    <br />
+                    {t("friend-2-jd-detail-6")}
+                    <br />
+                    {t("friend-2-jd-detail-7")}
+                    <br />
                   </div>
                 </p>
               </div>
@@ -168,14 +205,17 @@ function friend() {
             </div>
             <div class="col-md-8">
               <div class="card-body">
-                <h5 class="card-title">Travel</h5>
+                <h5 class="card-title">{t("Travel")}</h5>
                 <p class="card-text">
                   <div>
-                    🌍 50+ Countries <br />
-                    🗺️ Only for Cultural Heritage <br />
+                    {t("friend-3-jd-detail-2")}
                     <br />
-                    🔥 2024: South American <br />
-                    🔥 2024: Australia <br />
+                    {t("friend-3-jd-detail-3")}
+                    <br />
+                    <br />
+                    {t("friend-3-jd-detail-4")}
+                    <br />
+                    {t("friend-3-jd-detail-5")}
                   </div>
                 </p>
               </div>
@@ -195,14 +235,17 @@ function friend() {
             </div>
             <div class="col-md-8">
               <div class="card-body">
-                <h5 class="card-title">Hiking</h5>
+                <h5 class="card-title">{t("Hiking")}</h5>
                 <p class="card-text">
                   <div>
-                    ⛰️ Like best <br />
-                    🤿 Scuba Diving OK <br />
+                    {t("friend-4-jd-detail-2")}
                     <br />
-                    🔥 Goal: Mount Kilimanjaro <br />
-                    🔥 Backgound Pic: Everest Base Camp <br />
+                    {t("friend-4-jd-detail-3")}
+                    <br />
+                    <br />
+                    {t("friend-4-jd-detail-4")}
+                    <br />
+                    {t("friend-4-jd-detail-5")}
                   </div>
                 </p>
               </div>
@@ -216,4 +259,4 @@ function friend() {
   );
 }
 
-export default friend;
+export default Friend;

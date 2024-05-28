@@ -5,6 +5,7 @@ import Header from "./components/header";
 import Labheader from "../src/components/lab/labheader";
 import Footer from "./components/footer";
 import Main from "./components/main";
+import "./components/i18next";
 
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import AdUnit from "../src/components/lab/worklab/adUnit";
@@ -13,6 +14,7 @@ import AutoScroolAds from "./components/lab/worklab/autoscrollAdTech";
 import AutoPreviewUrlTesting from "./components/lab/worklab/autoPreviewUrlTesting";
 import AdProject from "./components/lab/mllab/adProject";
 import AndroidGame from "./components/lab/worklab/android";
+import Weiming from "./components/lab/discoverylab/hrGraph";
 
 const labelement = (path, Tag) => (
   <Route
@@ -42,6 +44,7 @@ function App() {
             )}
             {labelement("/lab/mllab/adproject", <AdProject />)}
             {labelement("/lab/worklab/AndroidMatchGame", <AndroidGame />)}
+            {labelement("/lab/discoverylab/hrgraph", <Weiming />)}
             <Route
               path="/"
               element={

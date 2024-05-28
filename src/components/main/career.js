@@ -26,6 +26,7 @@ import {
   faRProject,
 } from "@fortawesome/free-brands-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { useTranslation } from "react-i18next";
 
 const iconStyle = {
   margin: "20px 10px",
@@ -35,7 +36,8 @@ const iconDisplay = (icon) => {
   return <FontAwesomeIcon icon={icon} size="2x" style={iconStyle} />;
 };
 
-function career() {
+function Career() {
+  const { t } = useTranslation();
   return (
     <div>
       <div id="career" style={{ padding: "30px" }}></div>
@@ -43,7 +45,7 @@ function career() {
         <div className="row">
           <div className="col"></div>
           <div className="col-lg-10">
-            <div className="display-4">Career</div>
+            <div className="display-4">{t("Career")}</div>
             <p
               style={{
                 textAlign: "left",
@@ -53,14 +55,7 @@ function career() {
                 fontFamily: "Verdana",
               }}
             >
-              Hello, I am Chucky JI. My Japanese name is Chucky Kazamatsuri. I
-              am an AI Full-stack Engineer. I used to be the senior partner with
-              over 9 years of experience in Management consulting. I specialize
-              in 4 years of digital transformation and 5 years of data science.
-              Additionally, I have 2 years of experience in AI development. I
-              excel at producing results in high-intensity situations and am
-              always willing to share my knowledge. Being a good communicator
-              and researcher is integral to my work.
+              {t("introduction-career")}
             </p>
           </div>
 
@@ -125,7 +120,7 @@ function career() {
                   <img src={Mediacorp} alt="" />
                   <div className="lead text-center">
                     Mediacorp PTE Ltds. <br />
-                    AI Full-stack Engineer & Ad Tech Specialist
+                    {t("2024-jd")}
                   </div>
                   <div className="d-flex justify-content-center">
                     {iconDisplay(faPython)}
@@ -145,16 +140,13 @@ function career() {
                     justifyContent: "center",
                   }}
                 >
-                  - Automized 2 Ads Dept. processes, reducing 70% more time and
-                  cost
+                  {t("2024-jd-detail-1")}
                   <br />
-                  - Contributed to 6 internal AI application programming
-                  projects
+                  {t("2024-jd-detail-2")}
                   <br />
-                  - Participated in 3 research initiatives focusing on the
-                  latest skills and models
-                  <br />- Collaborated with the team on launching new features
-                  for internal tool.
+                  {t("2024-jd-detail-3")}
+                  <br />
+                  {t("2024-jd-detail-4")}
                 </div>
               </div>
 
@@ -177,24 +169,32 @@ function career() {
                     justifyContent: "center",
                   }}
                 >
-                  NUS Relevant Courses: <br />
-                  - Software Analysis and Design <br />
-                  - Machine Learning <br />
-                  - Web Application Development <br />
-                  - Mobile Application Development <br />
-                  Training: <br />
-                  - (AWS) Practical Data Science with Amazon SageMaker <br />
-                  - (AWS) Building Batch Data Analytics Solutions on AWS
+                  {t("2023-jd-detail-1")}
                   <br />
-                  Kaggle: <br />
-                  [BRONZE] LLM Science Exam: Use LLMs to answer difficult
-                  science questions
+                  {t("2023-jd-detail-2")}
+                  <br />
+                  {t("2023-jd-detail-3")}
+                  <br />
+                  {t("2023-jd-detail-4")}
+                  <br />
+                  {t("2023-jd-detail-5")}
+                  <br />
+                  {t("2023-jd-detail-6")}
+                  <br />
+                  {t("2023-jd-detail-7")}
+                  <br />
+                  {t("2023-jd-detail-8")}
+                  <br />
+                  {t("2023-jd-detail-9")}
+                  <br />
+                  {t("2023-jd-detail-10")}
+                  <br />
                 </div>
                 <div className="col-md-6 col-sm-12 d-flex flex-column align-items-center">
                   <img src={Mediacorp} alt="" />
                   <div className="lead">
                     Mediacorp PTE Ltds. <br />
-                    AI Full-stack Engineer
+                    {t("2023-jd-1")}
                   </div>
                   <div>
                     {iconDisplay(faPython)}
@@ -206,7 +206,7 @@ function career() {
                   </div>
                   <br />
                   <img src={nus} alt="" />
-                  <div className="lead">System Analysis</div>
+                  <div className="lead">{t("2023-jd-2")}</div>
                   <div>
                     {iconDisplay(faPython)}
                     {iconDisplay(faJava)}
@@ -232,7 +232,7 @@ function career() {
                   <img src={allpku} alt="" style={{ width: "20%" }} />
                   <div className="lead text-center">
                     Alliance PKU Management Consultants LTD. <br />
-                    Senior Partner, General Manager of IT Industry Center,
+                    {t("2022-jd-1")}
                     <br />
                   </div>
                   <div className="d-flex justify-content-center">
@@ -243,9 +243,9 @@ function career() {
                   <img src={ruc} alt="" style={{ width: "30%" }} />
                   <div className="lead text-center">
                     Renmin University of China <br />
-                    Probability Theory and Mathematical Statistics
+                    {t("2022-jd-2")}
                     <br />
-                    Master of Science in Statistics
+                    {t("2022-jd-3")}
                     <br />
                   </div>
                   <div className="d-flex justify-content-center">
@@ -262,12 +262,10 @@ function career() {
                     justifyContent: "center",
                   }}
                 >
-                  - Led a team of 12 consultants in IT Industry Center <br />
-                  - Engaged in 513 business negotiations and project
-                  communications <br />
-                  - Dedicated and accomplished 45 consulting projects <br />
-                  - Contributed to a total contract value of CNY 13.5 million
-                  <br />
+                  {t("2022-jd-detail-1")} <br />
+                  {t("2022-jd-detail-2")} <br />
+                  {t("2022-jd-detail-3")} <br />
+                  {t("2022-jd-detail-4")} <br />
                 </div>
               </div>
 
@@ -289,18 +287,15 @@ function career() {
                     justifyContent: "center",
                   }}
                 >
-                  - Certified Management Consultant (International Council of
-                  Management Consulting Institutes) <br />
-                  - Individual Outstanding Contribution Award (Ministry of
-                  Industry and Information Technology)(Total number in China in
-                  2021: 49 ppl) <br />- National SME management consulting
-                  expert (Ministry of Industry and Information Technology)
+                  {t("2021-jd-detail-1")} <br />
+                  {t("2021-jd-detail-2")} <br />
+                  {t("2021-jd-detail-3")} <br />
                 </div>
                 <div className="col-md-6 col-sm-12 d-flex flex-column align-items-center">
                   <img src={allpku} alt="" style={{ width: "20%" }} />
                   <div className="lead text-center">
                     Alliance PKU Management Consultants LTD. <br />
-                    Senior Partner, General Manager of IT Industry Center,
+                    {t("2021-jd-1")}
                   </div>
                   <div className="d-flex justify-content-center">
                     {iconDisplay(faPython)}
@@ -312,8 +307,8 @@ function career() {
                   <div className="lead">
                     Zhejiang University of Finance and Economics
                     <br />
-                    School of Data Science <br />
-                    Full-time Student Tutor (2021-2025)
+                    {t("2021-jd-2")} <br />
+                    {t("2021-jd-3")}
                     <br />
                   </div>
                   <div>
@@ -336,7 +331,7 @@ function career() {
                     <img src={allpku} alt="" style={{ width: "10%" }} />
                     <div className="lead text-center">
                       Alliance PKU Management Consultants LTD. <br />
-                      Senior Partner, General Manager of IT Industry Center,
+                      {t("2020-jd")}
                     </div>
                     <div className="d-flex justify-content-center">
                       {iconDisplay(faPython)}
@@ -347,7 +342,7 @@ function career() {
                       className="d-flex justify-content-center"
                       style={{ fontSize: "1rem", fontWeight: "bold" }}
                     >
-                      Digital transformation Cases (Exclude traditional cases)
+                      {t("2020-jd-detail")}
                     </div>
                   </div>
                   <div
@@ -390,4 +385,4 @@ function career() {
   );
 }
 
-export default career;
+export default Career;

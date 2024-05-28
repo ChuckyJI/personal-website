@@ -1,4 +1,5 @@
 import React from "react";
+import { useTranslation } from "react-i18next";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faGithub,
@@ -7,7 +8,8 @@ import {
   faLinkedin,
 } from "@fortawesome/free-brands-svg-icons";
 
-function footer() {
+function Footer() {
+  const { t } = useTranslation();
   return (
     <div>
       <div id="contact"></div>
@@ -16,7 +18,7 @@ function footer() {
           <div className="col-1 text-center"></div>
           <div className="col text-center">
             <div style={{ fontSize: "2rem", fontWeight: "bold" }}>
-              Contact Me
+              {t("Contact Me")}
             </div>
             <div>
               <a
@@ -55,7 +57,7 @@ function footer() {
             <div style={{ lineHeight: 2 }}>Email: satotroy.ji@gmail.com</div>
             <hr />
             <div style={{ fontWeight: "bold", margin: "10px 0 10px 0" }}>
-              © COPYRIGHT 2024 BY CHUCKY KAZAMATSURI.
+              {t("Copyright")}
             </div>
           </div>
           <div className="col-1 text-center"></div>
@@ -65,4 +67,4 @@ function footer() {
   );
 }
 
-export default footer;
+export default Footer;

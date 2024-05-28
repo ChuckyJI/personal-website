@@ -1,24 +1,24 @@
 import React from "react";
 import { Tab, Tabs } from "react-bootstrap";
 import { label } from "../../utils/constants";
+import { useTranslation } from "react-i18next";
 
-function lab() {
+function Lab() {
+  const { t } = useTranslation();
   return (
     <div style={{ backgroundColor: "rgba(0,222,222,0.2)" }}>
       <div id="lab" style={{ padding: "20px" }}></div>
       <div className="display-4" style={{ margin: "20px" }}>
-        Laboratory
+        {t("Laboratory")}
       </div>
-      <div style={{ margin: "5px 0px" }}>
-        (Project details are only available on desktop.)
-      </div>
+      <div style={{ margin: "5px 0px" }}>{t("lab-attention")}</div>
       <div style={{ minHeight: "400px", height: "auto" }}>
         <Tabs
           defaultActiveKey="home"
           id="uncontrolled-tab-example"
           style={{ justifyContent: "center" }}
         >
-          <Tab eventKey="home" title="Machine Learning Lab">
+          <Tab eventKey="home" title={t("Machine Learning Lab")}>
             <div style={{ margin: "10px" }}></div>
             {label(
               "adProject",
@@ -29,7 +29,7 @@ function lab() {
               "/lab/mllab/adProject"
             )}
           </Tab>
-          <Tab eventKey="profile" title="Work / Study Lab">
+          <Tab eventKey="profile" title={t("Work / Study Lab")}>
             <div style={{ margin: "10px" }}></div>
             {label(
               "adunit",
@@ -64,7 +64,7 @@ function lab() {
               "/lab/worklab/AndroidMatchGame"
             )}
           </Tab>
-          <Tab eventKey="contact" title="Discovery Lab">
+          <Tab eventKey="contact" title={t("Discovery Lab")}>
             <div style={{ margin: "10px" }}></div>
             {label(
               "presignUrl",
@@ -82,4 +82,4 @@ function lab() {
   );
 }
 
-export default lab;
+export default Lab;

@@ -1,13 +1,16 @@
 import React from "react";
 import "../App.css";
+import { useTranslation } from "react-i18next";
+import i18n from "i18next";
 
 function Header() {
+  const { t } = useTranslation();
   return (
     <div>
       <nav className="navbar navbar-expand-lg bg-body-tertiary bg-light-subtle fixed-top">
         <div className="container-fluid">
           <a className="navbar-brand" href="/">
-            CHUCKY
+            {t("CHUCKY")}
           </a>
           <button
             className="navbar-toggler"
@@ -27,12 +30,12 @@ function Header() {
             <ul className="navbar-nav">
               <li className="nav-item">
                 <a className="nav-link" aria-current="page" href="/">
-                  Home
+                  {t("home")}
                 </a>
               </li>
               <li className="nav-item">
                 <a className="nav-link" href="#career">
-                  Career
+                  {t("Career")}
                 </a>
               </li>
 
@@ -45,35 +48,68 @@ function Header() {
                   data-bs-toggle="dropdown"
                   aria-expanded="false"
                 >
-                  Laboratory
+                  {t("Laboratory")}
                 </a>
                 <ul className="dropdown-menu">
                   <li>
                     <a className="dropdown-item" href="#lab">
-                      Machine Learning Lab
+                      {t("Machine Learning Lab")}
                     </a>
                   </li>
                   <li>
                     <a className="dropdown-item" href="#lab">
-                      Work / Study Lab
+                      {t("Work / Study Lab")}
                     </a>
                   </li>
                   <li>
                     <a className="dropdown-item" href="#lab">
-                      Discovery Lab
+                      {t("Discovery Lab")}
                     </a>
                   </li>
                 </ul>
               </li>
               <li className="nav-item">
                 <a className="nav-link" href="#habit">
-                  Make Friends
+                  {t("Make Friends")}
                 </a>
               </li>
               <li className="nav-item">
                 <a className="nav-link" href="#contact">
-                  Contact Me
+                  {t("Contact Me")}
                 </a>
+              </li>
+
+              <li className="nav-item dropdown">
+                <a
+                  className="nav-link dropdown-toggle"
+                  href="#lab"
+                  id="navbarDropdown"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  {t("Language")}
+                </a>
+                <ul className="dropdown-menu">
+                  <li>
+                    <div
+                      className="dropdown-item"
+                      onClick={() => i18n.changeLanguage("en")}
+                      type="button"
+                    >
+                      English
+                    </div>
+                  </li>
+                  <li>
+                    <div
+                      className="dropdown-item"
+                      onClick={() => i18n.changeLanguage("jp")}
+                      type="button"
+                    >
+                      日本語
+                    </div>
+                  </li>
+                </ul>
               </li>
             </ul>
           </div>
@@ -83,7 +119,7 @@ function Header() {
         className="to-top bg-info-subtle btn-sm"
         onClick={() => window.scrollTo(0, 0)}
       >
-        To Top
+        {t("To Top")}
       </button>
     </div>
   );
