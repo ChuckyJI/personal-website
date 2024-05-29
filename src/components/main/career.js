@@ -119,7 +119,10 @@ function Career() {
                 <div className="col-md-6 col-sm-12 d-flex flex-column align-items-center">
                   <img src={Mediacorp} alt="" />
                   <div className="lead text-center">
-                    Mediacorp PTE Ltds. <br />
+                    <span style={{ fontWeight: "bold" }}>
+                      Mediacorp PTE Ltds.
+                    </span>{" "}
+                    <br />
                     {t("2024-jd")}
                   </div>
                   <div className="d-flex justify-content-center">
@@ -193,7 +196,10 @@ function Career() {
                 <div className="col-md-6 col-sm-12 d-flex flex-column align-items-center">
                   <img src={Mediacorp} alt="" />
                   <div className="lead">
-                    Mediacorp PTE Ltds. <br />
+                    <span style={{ fontWeight: "bold" }}>
+                      Mediacorp PTE Ltds.
+                    </span>{" "}
+                    <br />
                     {t("2023-jd-1")}
                   </div>
                   <div>
@@ -231,7 +237,10 @@ function Career() {
                 <div className="col-md-6 col-sm-12 d-lg-flex flex-column align-items-center">
                   <img src={allpku} alt="" style={{ width: "20%" }} />
                   <div className="lead text-center">
-                    Alliance PKU Management Consultants LTD. <br />
+                    <span style={{ fontWeight: "bold" }}>
+                      Alliance PKU Management Consultants LTD.
+                    </span>
+                    <br />
                     {t("2022-jd-1")}
                     <br />
                   </div>
@@ -242,7 +251,10 @@ function Career() {
                   </div>
                   <img src={ruc} alt="" style={{ width: "30%" }} />
                   <div className="lead text-center">
-                    Renmin University of China <br />
+                    <span style={{ fontWeight: "bold" }}>
+                      Renmin University of China
+                    </span>{" "}
+                    <br />
                     {t("2022-jd-2")}
                     <br />
                     {t("2022-jd-3")}
@@ -294,7 +306,10 @@ function Career() {
                 <div className="col-md-6 col-sm-12 d-flex flex-column align-items-center">
                   <img src={allpku} alt="" style={{ width: "20%" }} />
                   <div className="lead text-center">
-                    Alliance PKU Management Consultants LTD. <br />
+                    <span style={{ fontWeight: "bold" }}>
+                      Alliance PKU Management Consultants LTD.{" "}
+                    </span>
+                    <br />
                     {t("2021-jd-1")}
                   </div>
                   <div className="d-flex justify-content-center">
@@ -305,7 +320,9 @@ function Career() {
                   <br />
                   <img src={zufe} alt="" style={{ width: "30%" }} />
                   <div className="lead">
-                    Zhejiang University of Finance and Economics
+                    <span style={{ fontWeight: "bold" }}>
+                      Zhejiang University of Finance and Economics
+                    </span>
                     <br />
                     {t("2021-jd-2")} <br />
                     {t("2021-jd-3")}
@@ -330,7 +347,10 @@ function Career() {
                   <div className="col d-flex flex-column align-items-center">
                     <img src={allpku} alt="" style={{ width: "10%" }} />
                     <div className="lead text-center">
-                      Alliance PKU Management Consultants LTD. <br />
+                      <span style={{ fontWeight: "bold" }}>
+                        Alliance PKU Management Consultants LTD.{" "}
+                      </span>
+                      <br />
                       {t("2020-jd")}
                     </div>
                     <div className="d-flex justify-content-center">

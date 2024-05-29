@@ -17,7 +17,7 @@ function Friend() {
     <div style={{ backgroundColor: "rgba(0,222,0,0.2)" }}>
       <div id="habit" style={{ padding: "20px" }}></div>
       <div className="display-4" style={{ margin: "20px" }}>
-        🏳️‍🌈 Make Friends
+        🏳️‍🌈 {t("Make Friends")}
       </div>
       <div className="container-lg d-lg-block d-none">
         <div className="row">
