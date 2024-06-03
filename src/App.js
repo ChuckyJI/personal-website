@@ -14,7 +14,7 @@ import AutoScroolAds from "./components/lab/worklab/autoscrollAdTech";
 import AutoPreviewUrlTesting from "./components/lab/worklab/autoPreviewUrlTesting";
 import AdProject from "./components/lab/mllab/adProject";
 import AndroidGame from "./components/lab/worklab/android";
-import Weiming from "./components/lab/consultingDemo/hrGraph";
+import HRGraph from "./components/lab/consultingDemo/HRGraph/hrGraph";
 import Purchase from "./components/lab/consultingDemo/Purchase/purchase";
 
 const labelement = (path, Tag) => (
@@ -45,7 +45,7 @@ function App() {
             )}
             {labelement("/lab/mllab/adproject", <AdProject />)}
             {labelement("/lab/worklab/AndroidMatchGame", <AndroidGame />)}
-            {labelement("/lab/discoverylab/hrgraph", <Weiming />)}
+            {labelement("/lab/consultingdemo/hrgraph", <HRGraph />)}
             {labelement("/lab/consultingdemo/purchase", <Purchase />)}
             <Route
               path="/"
