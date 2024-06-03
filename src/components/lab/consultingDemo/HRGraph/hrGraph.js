@@ -36,14 +36,14 @@ function HRGraph() {
     };
   }, []);
 
-  const TreeNode = ({ label, children, click }) => (
-    <li className={children ? "parent_li" : ""}>
-      <span onClick={click === "true" ? () => setStaffName(label) : undefined}>
-        {label}
-      </span>
-      {children && <ul>{children}</ul>}
-    </li>
-  );
+  // const TreeNode = ({ label, children, click }) => (
+  //   <li className={children ? "parent_li" : ""}>
+  //     <span onClick={click === "true" ? () => setStaffName(label) : undefined}>
+  //       {label}
+  //     </span>
+  //     {children && <ul>{children}</ul>}
+  //   </li>
+  // );
 
   const transformCompanyData = (data) => {
     return data.map((department, deptIndex) => {

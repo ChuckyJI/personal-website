@@ -66,6 +66,11 @@ function Header() {
                       {t("Discovery Lab")}
                     </a>
                   </li>
+                  <li>
+                    <a className="dropdown-item" href="#lab">
+                      {t("Consulting Lab")}
+                    </a>
+                  </li>
                 </ul>
               </li>
               <li className="nav-item">

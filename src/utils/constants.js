@@ -11,7 +11,7 @@ export const label = (
       <div className="row">
         <div className="col-12">
           <div
-            class="btn btn-block"
+            className="btn btn-block"
             type="button"
             data-bs-toggle="collapse"
             data-bs-target={"#" + collapseExample}
@@ -39,9 +39,9 @@ export const label = (
       </div>
       <div className="row">
         <div className="col-12">
-          <div class="collapse" id={collapseExample}>
+          <div className="collapse" id={collapseExample}>
             <div
-              class="card card-body d-flex justify-content-between align-items-end"
+              className="card card-body d-flex justify-content-between align-items-end"
               style={{ textAlign: "left", lineHeight: 2 }}
             >
               <div>Background: {Background}</div>

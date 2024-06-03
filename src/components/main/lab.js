@@ -2,9 +2,26 @@ import React from "react";
 import { Tab, Tabs } from "react-bootstrap";
 import { label } from "../../utils/constants";
 import { useTranslation } from "react-i18next";
+import { useState } from "react";
 
 function Lab() {
   const { t } = useTranslation();
+  const [inputValue, setInputValue] = useState("");
+  const [showInput, setShowInput] = useState(true);
+
+  const handleButtonClick = () => {
+    const year = new Date().getFullYear().toString().padStart(4, "0");
+    const month = (new Date().getMonth() + 1).toString().padStart(2, "0");
+    const date = new Date().getDate().toString().padStart(2, "0");
+    const hour = new Date().getHours().toString().padStart(2, "0");
+    const secretKey = year + month + date + hour;
+    if (inputValue === secretKey) {
+      setShowInput(false);
+    } else {
+      alert("The input value is not correct, please try again!");
+    }
+  };
+
   return (
     <div style={{ backgroundColor: "rgba(0,222,222,0.2)" }}>
       <div id="lab" style={{ padding: "20px" }}></div>
@@ -14,11 +31,11 @@ function Lab() {
       <div style={{ margin: "5px 0px" }}>{t("lab-attention")}</div>
       <div style={{ minHeight: "400px", height: "auto" }}>
         <Tabs
-          defaultActiveKey="home"
+          defaultActiveKey="Machine"
           id="uncontrolled-tab-example"
           style={{ justifyContent: "center" }}
         >
-          <Tab eventKey="home" title={t("Machine Learning Lab")}>
+          <Tab eventKey="Machine" title={t("Machine Learning Lab")}>
             <div style={{ margin: "10px" }}></div>
             {label(
               "adProject",
@@ -29,7 +46,7 @@ function Lab() {
               "/lab/mllab/adProject"
             )}
           </Tab>
-          <Tab eventKey="profile" title={t("Work / Study Lab")}>
+          <Tab eventKey="Work" title={t("Work / Study Lab")}>
             <div style={{ margin: "10px" }}></div>
             {label(
               "adunit",
@@ -64,7 +81,7 @@ function Lab() {
               "/lab/worklab/AndroidMatchGame"
             )}
           </Tab>
-          <Tab eventKey="contact" title={t("Discovery Lab")}>
+          <Tab eventKey="Discovery" title={t("Discovery Lab")}>
             <div style={{ margin: "10px" }}></div>
             {label(
               "presignUrl",
@@ -74,6 +91,70 @@ function Lab() {
               "This project is to generate a presigned URL from the frontend to access a private S3 bucket. The presigned URL is a temporary URL that grants access to a private S3 bucket for a limited time, which will be used to upload files. It is a practice project before put it into production.",
               "/lab/discoverylab/s3Presignurl"
             )}
+          </Tab>
+          <Tab eventKey="consulting" title={t("Consulting Lab")}>
+            <div style={{ margin: "10px" }}></div>
+            <div className="container mt-2 mb-2">
+              {showInput ? (
+                <div className="input-group mb-3">
+                  <span
+                    className="input-group-text"
+                    id="inputGroup-sizing-default"
+                  >
+                    Private Entry Key:
+                  </span>
+
+                  <input
+                    type="text"
+                    className="form-control"
+                    aria-label="Sizing example input"
+                    aria-describedby="inputGroup-sizing-default"
+                    value={inputValue}
+                    onChange={(e) => setInputValue(e.target.value)}
+                  />
+
+                  <button
+                    className="btn btn-outline-secondary"
+                    type="button"
+                    onClick={handleButtonClick}
+                  >
+                    OK
+                  </button>
+                </div>
+              ) : (
+                <>
+                  <div
+                    className="text-bg-danger p-3"
+                    style={{ textAlign: "left" }}
+                  >
+                    Warning （注意） <br /> This consulting section is only for
+                    demo design and testing purposes. It is not the final
+                    version or complete. This section is available temporarily
+                    and is not for commercial use. <br />
+                    このコンサルティングセクションはデモデザインとテストの目的のためのものです。最終版でも完全版でもありません。このセクションは一時的に利用可能であり、商業利用はできません。
+                    <br />
+                    本测试仅供过程展示与样板展示，并不是最终完全版本，并仅供测试使用，不可商用。
+                  </div>
+                  {label(
+                    "WMGroupHR",
+                    "HR Platform",
+                    "HR",
+                    3,
+                    "This project is to generate a management System Demo for HR, which can help them to know more about the information in the Group.",
+                    "/lab/consultingdemo/hrgraph"
+                  )}
+
+                  {label(
+                    "WMPurchase",
+                    "Purchase Platform",
+                    "Purchase, HR",
+                    4,
+                    "This project is to generate a management System Demo for Purcase, which can monitor the status of purchase and status of the orders and suppliers.",
+                    "/lab/consultingdemo/purchase"
+                  )}
+                </>
+              )}
+            </div>
           </Tab>
         </Tabs>
       </div>
