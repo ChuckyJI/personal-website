@@ -16,6 +16,7 @@ import AdProject from "./components/lab/mllab/adProject";
 import AndroidGame from "./components/lab/worklab/android";
 import HRGraph from "./components/lab/consultingDemo/HRGraph/hrGraph";
 import Purchase from "./components/lab/consultingDemo/Purchase/purchase";
+import Adpreview from "./components/lab/consultingDemo/AdSizePreview/adpreview";
 
 const labelement = (path, Tag) => (
   <Route
@@ -47,6 +48,7 @@ function App() {
             {labelement("/lab/worklab/AndroidMatchGame", <AndroidGame />)}
             {labelement("/lab/consultingdemo/hrgraph", <HRGraph />)}
             {labelement("/lab/consultingdemo/purchase", <Purchase />)}
+            {labelement("/lab/consultingdemo/adpreview", <Adpreview />)}
             <Route
               path="/"
               element={
