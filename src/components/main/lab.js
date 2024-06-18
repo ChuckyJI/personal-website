@@ -91,6 +91,14 @@ function Lab() {
               "This project is to generate a presigned URL from the frontend to access a private S3 bucket. The presigned URL is a temporary URL that grants access to a private S3 bucket for a limited time, which will be used to upload files. It is a practice project before put it into production.",
               "/lab/discoverylab/s3Presignurl"
             )}
+            {label(
+              "FlexibleAdsTest",
+              "Responsive Design for Ads",
+              "JavaScript",
+              3,
+              "This project is a fast generated responsive design for the advertisement in the website. For the users can customize the size of the advertisement and the position of the element in the ads. It is a practice project before put it into production.",
+              "/lab/consultingdemo/adpreview"
+            )}
           </Tab>
           <Tab eventKey="consulting" title={t("Consulting Lab")}>
             <div style={{ margin: "10px" }}></div>
