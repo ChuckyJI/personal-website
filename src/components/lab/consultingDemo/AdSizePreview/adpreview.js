@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Divider } from "antd";
 import testImg from "../../../../static/images/lab/discoverylab/AdPreviewtest.png";
+import logo from "../../../../static/images/Logotest.png";
 import generatead from "./generatead";
 
 function Adpreview() {
@@ -13,17 +14,34 @@ function Adpreview() {
   const [description, setDescription] = useState("Test Description");
   const [PageContent, setPageContent] = useState();
   const [ratio, setRatio] = useState();
+  const [backgroundPic, setBackgroundPic] = useState();
+  const [logoImage, setLogoImage] = useState();
+  const [sponsorName, setSponsorName] = useState("ABCDE");
+  const [backFormat, setBackFormat] = useState("image/png");
+
+  const [formatImage, setFormatImage] = useState(true);
+  const [formatText, setFormatText] = useState(true);
+  const [formatVideo, setFormatVideo] = useState(false);
+
+  const [layoutStyle, setLayoutStyle] = useState("imageText");
+
+  const [secondRichMedia, setSecondRichMedia] = useState();
 
   const GenerateAd = () => {
     const htmlContent = generatead(
-      testImg,
+      backFormat,
+      backgroundPic ? URL.createObjectURL(backgroundPic[0]) : testImg,
       adLargeProportion,
       adSmallProportion,
       imgProportion,
       parseFloat(imgShiftLeftRight),
       parseFloat(imgShiftUpDown),
       headline,
-      description
+      description,
+      sponsorName,
+      logoImage ? URL.createObjectURL(logoImage[0]) : logo,
+      layoutStyle,
+      secondRichMedia ? URL.createObjectURL(secondRichMedia[0]) : testImg
     );
 
     setPageContent(htmlContent);
@@ -77,10 +95,34 @@ function Adpreview() {
           </div>
 
           <h4>Advanced Setting</h4>
-          <div>This setting is for advanced adjustment</div>
+          <div>
+            This setting is for advanced adjustment. And the rich media contains
+            image and video(mp4).
+          </div>
           <div className="input-group mt-3">
+            <label className="input-group-text" htmlFor="inputGroupFile01">
+              Choose a background Media
+            </label>
+            <input
+              type="file"
+              className="form-control"
+              onChange={(e) => {
+                const file = e.target.files[0];
+                if (
+                  file.type === "image/jpeg" ||
+                  file.type === "image/png" ||
+                  file.type === "image/jpg" ||
+                  file.type === "video/mp4"
+                ) {
+                  setBackgroundPic(e.target.files);
+                  setBackFormat(e.target.files[0].type);
+                } else {
+                  alert("Please upload a PNG, JPEG, JPG OR MP4 file");
+                }
+              }}
+            />
             <span className="input-group-text" id="basic-addon1">
-              Image Proportion:
+              Image (1st Media) Proportion:
             </span>
             <input
               type="text"
@@ -119,6 +161,35 @@ function Adpreview() {
             />
           </div>
           <div className="input-group mt-3">
+            <label className="input-group-text" htmlFor="inputGroupFile01">
+              Choose a Logo
+            </label>
+            <input
+              className="form-control"
+              type="file"
+              onChange={(e) => {
+                const file = e.target.files[0];
+                if (file.type === "image/jpeg" || file.type === "image/png") {
+                  setLogoImage(e.target.files);
+                } else {
+                  alert("Please upload a PNG or JPEG file");
+                }
+              }}
+            />
+            <span className="input-group-text" id="basic-addon1">
+              Sponsor Name:
+            </span>
+            <input
+              type="text"
+              className="form-control"
+              placeholder="Input your sponsor name."
+              aria-label="sponsprname"
+              aria-describedby="basic-addon1"
+              defaultValue={sponsorName}
+              onChange={(e) => setSponsorName(e.target.value)}
+            />
+          </div>
+          <div className="input-group mt-3">
             <span className="input-group-text" id="basic-addon1">
               Headline:
             </span>
@@ -147,11 +218,148 @@ function Adpreview() {
           </div>
 
           <div
+            className="input-group mt-3"
+            style={{
+              display: "flex",
+              justifyContent: "left",
+              alignItems: "center",
+            }}
+          >
+            <span className="input-group-text" id="basic-addon1">
+              Content Format
+            </span>
+            <input
+              className="form-check-input"
+              type="checkbox"
+              value=""
+              id="Image"
+              checked={formatImage}
+              onChange={(e) => setFormatImage(e.target.checked)}
+              style={{ margin: "0px 10px" }}
+            />
+            <label className="form-check-label" htmlFor="Image">
+              Image
+            </label>
+            <input
+              className="form-check-input"
+              type="checkbox"
+              value=""
+              id="Text"
+              checked={formatText}
+              onChange={(e) => setFormatText(e.target.checked)}
+              style={{ margin: "0px 10px" }}
+            />
+            <label className="form-check-label" htmlFor="Text">
+              Text
+            </label>
+            <input
+              className="form-check-input"
+              type="checkbox"
+              value=""
+              id="Video"
+              onChange={(e) => {
+                if (formatImage && formatText) {
+                  alert(
+                    "You can only choose one content format from Image or Text"
+                  );
+                  e.target.checked = false;
+                } else {
+                  setFormatVideo(e.target.checked);
+                }
+              }}
+              style={{ margin: "0px 10px" }}
+            />
+            <label className="form-check-label" htmlFor="Video">
+              Video
+            </label>
+            {formatVideo && (
+              <div>
+                <input
+                  type="file"
+                  style={{ margin: "0px 10px" }}
+                  onChange={(e) => {
+                    const file = e.target.files[0];
+                    if (file.type === "video/mp4") {
+                      setSecondRichMedia(e.target.files);
+                    } else {
+                      alert("Please upload a MP4 file");
+                    }
+                  }}
+                />
+              </div>
+            )}
+          </div>
+
+          <div
+            className="input-group mt-3"
+            style={{
+              display: "flex",
+              justifyContent: "left",
+              alignItems: "center",
+            }}
+          >
+            <span className="input-group-text" id="basic-addon1">
+              Layout Format
+            </span>
+
+            <div className="form-check">
+              <input
+                className="form-check-input"
+                type="radio"
+                name="exampleRadios"
+                id="imageText"
+                value="imageText"
+                checked={layoutStyle === "imageText"}
+                disabled={formatVideo}
+                style={{ margin: "0px 10px" }}
+                onChange={(e) => setLayoutStyle(e.target.value)}
+              />
+              <label className="form-check-label" htmlFor="imageText">
+                Default Design{" "}
+              </label>
+            </div>
+            <div className="form-check">
+              <input
+                className="form-check-input"
+                type="radio"
+                name="exampleRadios"
+                id="imageVideo"
+                value="imageVideo"
+                checked={layoutStyle === "imageVideo"}
+                disabled={!formatVideo}
+                style={{ margin: "0px 10px" }}
+                onChange={(e) => setLayoutStyle(e.target.value)}
+              />
+              <label className="form-check-label" htmlFor="imageVideo">
+                Up Image, Down Video (Left Image, Right Video)
+              </label>
+            </div>
+            <div className="form-check">
+              <input
+                className="form-check-input"
+                type="radio"
+                name="exampleRadios"
+                id="videoImage"
+                value="videoImage"
+                checked={layoutStyle === "videoImage"}
+                disabled={!formatVideo}
+                style={{ margin: "0px 10px" }}
+                onChange={(e) => setLayoutStyle(e.target.value)}
+              />
+              <label className="form-check-label" htmlFor="videoImage">
+                Up Video, Down Image (Left Video, Right Image)
+              </label>
+            </div>
+          </div>
+
+          <button
             className="btn btn-primary mt-4 mb-4"
             onClick={() => GenerateAd()}
+            disabled={formatImage && formatText && formatVideo}
           >
             Submit
-          </div>
+          </button>
+
           <Divider />
           <div
             style={{
