@@ -44,13 +44,13 @@ function MimicPerplexity() {
                 class="card-subtitle mb-2 mt-2 text-body-secondary"
                 style={{ fontWeight: "bold", lineHeight: 2 }}
               >
-                Background: The pleplexity is a good GPT tools with searching in
-                the public website and generate the result based on the search
-                content. My project is to mimic the perplexity with the media
-                content. I choose the Mediacorp Group and Bing search engine to
-                generate the result similar to Perplexity. Inside, not only I
-                show the internal result in Mediaocrp from public network, but
-                search the external ones from Bing as well. I use
+                Background: Perplexity is a useful GPT tool for searching public
+                websites and generating results based on search content. My
+                project aims to mimic Perplexity for media content. I have
+                chosen the Mediacorp Group and the Bing search engine to
+                generate results similar to Perplexity. The project not only
+                displays internal results from Mediacorp’s public network but
+                also includes external results from Bing.
               </h6>
               <p class="card-text" style={{ lineHeight: 2 }}>
                 Step 1,2: Landing Page.

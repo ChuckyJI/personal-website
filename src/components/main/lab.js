@@ -166,7 +166,7 @@ function Lab() {
                     "Mimic Media Perplexity",
                     "LLM, JavaScript, NodeJS, Python",
                     7,
-                    "This project is to generate a management System Demo for Purcase, which can monitor the status of purchase and status of the orders and suppliers.",
+                    "Perplexity is a useful GPT tool for searching public websites and generating results based on search content. My project aims to mimic Perplexity for media content. I have chosen the Mediacorp Group and the Bing search engine to generate results similar to Perplexity. The project not only displays internal results from Mediacorp’s public network but also includes external results from Bing.",
                     "/lab/consultingdemo/mimicPerplexity"
                   )}
                 </>
