@@ -1,0 +1,38 @@
+@keyframes marquee {
+    0% {
+      transform: translateX(100%);
+    }
+    100% {
+      transform: translateX(-100%);
+    }
+  }
+  
+.marquee-text {
+    /* display: flex; */
+    width: auto;
+    white-space: nowrap;
+    margin: 20px 0;
+    animation: marquee 20s linear infinite;
+  }
+
+.marquee-text:hover {
+    animation-play-state: paused;
+}
+
+.marquee {
+    width: 100vw;
+    margin: 90px 0;
+}
+
+.marquee-text-item {
+    border: 1px solid black;
+    padding: 5px 10px;
+    margin: 0px 10px;
+    border-radius: 50px;
+    display: inline-block;
+    background-color: #f6f6f6;
+}
+
+.custom:hover {
+    background-color: #f6f6f6;
+}

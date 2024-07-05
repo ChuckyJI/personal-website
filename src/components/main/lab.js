@@ -97,7 +97,7 @@ function Lab() {
               "JavaScript",
               3,
               "This project is a fast generated responsive design for the advertisement in the website. For the users can customize the size of the advertisement and the position of the element in the ads. It is a practice project before put it into production.",
-              "/lab/consultingdemo/adpreview"
+              "/lab/discoverylab/adpreview"
             )}
           </Tab>
           <Tab eventKey="consulting" title={t("Consulting Lab")}>
@@ -159,6 +159,15 @@ function Lab() {
                     4,
                     "This project is to generate a management System Demo for Purcase, which can monitor the status of purchase and status of the orders and suppliers.",
                     "/lab/consultingdemo/purchase"
+                  )}
+
+                  {label(
+                    "MimicPerplexity",
+                    "Mimic Media Perplexity",
+                    "LLM, JavaScript, NodeJS, Python",
+                    7,
+                    "This project is to generate a management System Demo for Purcase, which can monitor the status of purchase and status of the orders and suppliers.",
+                    "/lab/consultingdemo/mimicPerplexity"
                   )}
                 </>
               )}

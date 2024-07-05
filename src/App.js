@@ -16,7 +16,10 @@ import AdProject from "./components/lab/mllab/adProject";
 import AndroidGame from "./components/lab/worklab/android";
 import HRGraph from "./components/lab/consultingDemo/HRGraph/hrGraph";
 import Purchase from "./components/lab/consultingDemo/Purchase/purchase";
-import Adpreview from "./components/lab/consultingDemo/AdSizePreview/adpreview";
+import Adpreview from "./components/lab/discoverylab/AdSizePreview/adpreview";
+import MimicPerplexity from "./components/lab/consultingDemo/perplexity/homepage";
+import Perplexity from "./components/lab/consultingDemo/perplexity/landingpage";
+import SearchingPage from "./components/lab/consultingDemo/perplexity/searchpage";
 
 const labelement = (path, Tag) => (
   <Route
@@ -48,7 +51,13 @@ function App() {
             {labelement("/lab/worklab/AndroidMatchGame", <AndroidGame />)}
             {labelement("/lab/consultingdemo/hrgraph", <HRGraph />)}
             {labelement("/lab/consultingdemo/purchase", <Purchase />)}
-            {labelement("/lab/consultingdemo/adpreview", <Adpreview />)}
+            {labelement("/lab/discoverylab/adpreview", <Adpreview />)}
+            {labelement(
+              "/lab/consultingdemo/mimicPerplexity",
+              <MimicPerplexity />
+            )}
+            {labelement("/lab/consultingdemo/ChurChexity", <Perplexity />)}
+            {labelement("/lab/consultingdemo/searchingpage", <SearchingPage />)}
             <Route
               path="/"
               element={
